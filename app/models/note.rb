@@ -1,3 +1,3 @@
 class Note < ApplicationRecord
-  validates :data, presence: true
+  validates :data,:title, presence: true
 end
