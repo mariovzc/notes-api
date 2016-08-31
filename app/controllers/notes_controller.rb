@@ -5,7 +5,7 @@ class NotesController < ApplicationController
     render json: notes, status: 200
   end
   def create
-    note = Note.save(notes_params)
+    note = Note.new(notes_params)
     if note.save
       render json: note, status: 200
     else
