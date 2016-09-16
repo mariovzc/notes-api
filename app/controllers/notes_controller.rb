@@ -2,12 +2,12 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :update, :destroy]
   def index
     notes = Note.all
-    render json: notes, status: 200
+    render json: notes
   end
   def create
     note = Note.new(notes_params)
     if note.save
-      render json: note, status: 200
+      render json: note , status: 200
     else
       render json: "Error Creando la Nota".to_json, status: :unprocessable_entity
     end
