@@ -11,9 +11,4 @@ RSpec.describe Note, type: :model do
     note.title = nil
     expect(note).to_not be_valid
   end
-  it "is not valid without a data" do
-    note.data = nil
-    expect(note).to_not be_valid
-  end
-
 end
